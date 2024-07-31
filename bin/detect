@@ -2,9 +2,12 @@
 
 BUILD_DIR=$1
 
+echo "Python TA-Lib"
+
 # Exit early if app is clearly not Python.
 if [ ! -f $BUILD_DIR/requirements.txt ] && [ ! -f $BUILD_DIR/setup.py ] && [ ! -f $BUILD_DIR/Pipfile ]; then
+  echo "TA-Lib requirement not detected"
   exit 1
 fi
 
-echo "Python TA-Lib"
+
